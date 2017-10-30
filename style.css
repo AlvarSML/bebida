@@ -1,0 +1,16 @@
+/* Generales */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Body */
+
+body {
+	height: 100%;
+
+	/*grid*/
+	display: grid;
+	grid-template-rows: 200px 1fr 1fr;
+	grid-template-columns: repeat(4,1fr);
+}
