@@ -11,7 +11,7 @@ body {
 
 	/*grid*/
 	display: grid;
-	grid-template-rows: 200px 500px 1fr;
+	grid-template-rows: [header] 200px [container] 500px [footer] 50px;
 	grid-template-columns: repeat(6,1fr);
 }
 
@@ -36,6 +36,7 @@ header h1 {
 #ladoIzq {
 	background-color: blue;
 
+	/*grid*/
 	grid-column-start: 1;
 	grid-column-end: 4;
 } 
@@ -43,6 +44,18 @@ header h1 {
 #ladoDer {
 	background-color: green;
 
+	/*grid*/
 	grid-column-start: 4;
+	grid-column-end: 7;
+}
+
+/* Footer */ 
+
+footer {
+	background-color: wheat;
+
+	/*grid*/
+	grid-row-start: footer;
+	grid-column-start: 1;
 	grid-column-end: 7;
 }
