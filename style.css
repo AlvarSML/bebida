@@ -11,6 +11,38 @@ body {
 
 	/*grid*/
 	display: grid;
-	grid-template-rows: 200px 1fr 1fr;
-	grid-template-columns: repeat(4,1fr);
+	grid-template-rows: 200px 500px 1fr;
+	grid-template-columns: repeat(6,1fr);
+}
+
+/* Header */
+
+header {
+	padding: 10px;
+	background-color: red;
+
+	/*grid*/
+	grid-column-start: 1;
+	grid-column-end: 7;
+}
+
+header h1 {
+	display: block;
+	color: white;
+}
+
+/* Contenido */
+
+#ladoIzq {
+	background-color: blue;
+
+	grid-column-start: 1;
+	grid-column-end: 4;
+} 
+
+#ladoDer {
+	background-color: green;
+
+	grid-column-start: 4;
+	grid-column-end: 7;
 }
