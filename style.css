@@ -11,7 +11,7 @@ body {
 
 	/*grid*/
 	display: grid;
-	grid-template-rows: [header] 200px [container] 500px [footer] 50px;
+	grid-template-rows: [header] 100px [containerinicio] 100px [container] 500px [containerfin] 100px [footer] 50px;
 	grid-template-columns: repeat(6,1fr);
 }
 
@@ -19,7 +19,7 @@ body {
 
 header {
 	padding: 10px;
-	background-color: red;
+	background-color: #514948;
 
 	/*grid*/
 	grid-column-start: 1;
@@ -29,33 +29,68 @@ header {
 header h1 {
 	display: block;
 	color: white;
+	text-align: center;
+	font-family: THUNDERJAGGER;
+	font-size: 50px;
+	margin-top: 10px;
 }
 
 /* Contenido */
 
+
+
 #ladoIzq {
-	background-color: blue;
+	background-image: url(img/fondoizq.jpg);
 
 	/*grid*/
 	grid-column-start: 1;
 	grid-column-end: 4;
+
 } 
 
 #ladoDer {
-	background-color: green;
+	background-image: url(img/fondoder.jpeg);
 
 	/*grid*/
 	grid-column-start: 4;
 	grid-column-end: 7;
+	
 }
 
+
+#botellader {
+  grid-row-start: container;
+	grid-column-start: 4; 
+}
+
+#botellaizq {
+	grid-row-start: container;
+	grid-column-start: 3;
+	justify-self: end;
+}
+
+
+.fondoContainer {
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	grid-row-start: containerinicio;
+	grid-row-end: footer;
+}
 /* Footer */ 
 
 footer {
-	background-color: wheat;
+	background-color: #514948;
 
 	/*grid*/
 	grid-row-start: footer;
 	grid-column-start: 1;
 	grid-column-end: 7;
+}
+
+/* fuentes */
+
+@font-face {
+font-family: THUNDERJAGGER;
+src: url(fuentes/THUNDERJAGGER.ttf);
 }
