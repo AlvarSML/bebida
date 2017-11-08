@@ -4,6 +4,23 @@
 	padding: 0;
 }
 
+p{
+	font-family: rexlia;
+	color:white;
+	font-size:22px;
+}
+
+h1 {
+	display: block;
+	color: white;
+	text-align: center;
+	font-family: THUNDERJAGGER;
+	font-size: 50px;
+}
+
+a {
+	text-decoration: none;
+}
 /* Body */
 
 body {
@@ -18,8 +35,10 @@ body {
 /* Header */
 
 header {
-	padding: 10px;
 	background-color: #514948;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 100px auto 100px ;
 
 	/*grid*/
 	grid-column-start: 1;
@@ -32,7 +51,54 @@ header h1 {
 	text-align: center;
 	font-family: THUNDERJAGGER;
 	font-size: 50px;
-	margin-top: 10px;
+
+	grid-column-start: 2;
+}
+
+header img {
+	width: 50%;
+	margin: 25px auto;
+
+	grid-column-start: 3;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+header div {
+	width: 100%;
+	height: 100%;
+
+	grid-column-start: 3;
+	grid-row-start: 1;
+	grid-row-end: 4;
+}
+
+header div:hover + ul {
+	visibility: visible;
+}
+
+header ul {
+	visibility: hidden;
+	position: fixed;
+	background-color: white;
+	display: block;
+	list-style: none;
+
+	right: 15px;
+	top: 100px;
+}
+
+header ul:hover {
+	visibility: visible;
+}
+
+header ul > li {
+	padding: 5px;
+}
+
+#gancho{
+	text-align: center;
+	grid-column-start: 2;
 }
 
 /* Contenido */
@@ -44,7 +110,21 @@ header h1 {
 	grid-column-start: 1;
 	grid-column-end: 4;
 
-} 
+	/*flexbox*/
+	flex-direction: row-reverse;
+
+}
+
+#ladoIzq>p {
+	visibility: hidden;
+	width: 80%;
+	margin: 100px auto;
+}
+
+#ladoIzq>img:hover + p {
+	visibility: visible;
+}
+
 
 #ladoDer {
 	background-image: url(img/fondoder.jpeg);
@@ -52,29 +132,46 @@ header h1 {
 	/*grid*/
 	grid-column-start: 4;
 	grid-column-end: 7;
-	
+
+}
+
+#ladoDer>p {
+	visibility: hidden;
+	width: 80%;
+	margin: 100px auto;
+}
+
+#ladoDer>img:hover + p {
+	visibility: visible;
 }
 
 .fondoContainer {
+	display: flex;
+
 	background-repeat: no-repeat;
 	background-size: cover;
 
 	grid-row-start: containerinicio;
 	grid-row-end: footer;
+
+	padding: 20px 0;
 }
 
-#botellader {
-  grid-row-start: container;
-	grid-column-start: 4; 
+.fondoContainer > img {
+	height: 500px;
+  margin: 100px 0;
 }
 
-#botellaizq {
-	grid-row-start: container;
+#logo {
 	grid-column-start: 3;
-	justify-self: end;
+	grid-column-end: 5;
+	grid-row-start: 3;
+	grid-row-end: 4;
+
+	margin: 270px 0;
 }
 
-/* Footer */ 
+/* Footer */
 
 footer {
 	background-color: #514948;
@@ -85,9 +182,16 @@ footer {
 	grid-column-end: 7;
 }
 
+
+
 /* fuentes */
 
 @font-face {
 font-family: THUNDERJAGGER;
 src: url(fuentes/THUNDERJAGGER.ttf);
+}
+
+@font-face {
+font-family: rexlia;
+src: url(fuentes/rexlia.ttf);
 }
