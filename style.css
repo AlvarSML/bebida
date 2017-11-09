@@ -2,7 +2,7 @@
 *	TODO:
 *	-ajustar letras de los lados
 * -ajustar Footer
-* 
+*
 * + menu
 */
 
@@ -234,6 +234,24 @@ footer {
 	text-align: center;
 	margin-top:13px;
 }
+
+
+/* ------------ Tienda -------------*/
+
+/*Container*/
+#bodyTienda {
+	grid-template-columns:1fr;
+}
+
+#containerTienda {
+	display: grid;
+	width: 100%;
+	height: 100%;
+
+	grid-template-rows: [tipo1] 1fr [tipo2] 1fr [misto] 1fr;
+	grid-template-columns: [individual] 1fr [peque] 2fr [grande] 3fr
+}
+
 /* fuentes */
 
 @font-face {
