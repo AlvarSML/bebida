@@ -273,17 +273,19 @@ footer {
 }
 
 .caja {
-   padding:10px;
-	 color: white;
-	 font-family: rexlia;
-	 font-size: 15px;
-	 border-radius: 2px;
-	 text-align: center;
+  padding:10px;
+	color: white;
+	font-family: rexlia;
+	font-size: 15px;
+	border-radius: 2px;
+	text-align: center;
 }
 
 .caja p {
 	font-size: 14px;
 	text-align: left;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .caja hr {
@@ -296,7 +298,7 @@ footer {
 }
 
 .caja img:hover {
-	opacity: .9;
+	opacity: .6;
 }
 
 .leyenda{
