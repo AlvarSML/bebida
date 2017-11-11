@@ -112,7 +112,7 @@ header ul {
 
 	margin-top: -70px;
 	right: 20px;
-	width: 200px;
+	width: 100px;
 }
 
 header ul:hover {
@@ -239,6 +239,43 @@ footer {
 	margin-top:13px;
 }
 
+@media (max-width: 800px) {
+	body {
+		display: grid;
+		grid-template-rows: 130px auto 100px auto 50px;
+		grid-template-columns: 1fr;
+	}
+	
+	#ladoIzq {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+	
+	#ladoDer {
+		grid-row-start: 4;
+		grid-row-end: 5;
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	#logo {
+		grid-row-start: 3;
+		grid-row-end: 4;
+		grid-column-start: 1;
+		grid-column-end: 2;
+
+		padding: 15px;
+		margin: 0;
+		background-color: rgb(32, 89, 33);
+	}
+	
+	footer {
+		grid-row-start: 5;
+	}
+	
+}
 
 /* ------------ Tienda -------------*/
 
@@ -297,7 +334,7 @@ footer {
 	width: 50px;
 }
 
-.caja img:hover {
+.caja a:hover {
 	opacity: .6;
 }
 
