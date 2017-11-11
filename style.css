@@ -246,7 +246,7 @@ footer {
 #bodyTienda {
 	grid-template-columns:15px 1fr 15px;
 	/* arreglar footer*/
-	grid-template-rows: 100px 600px 100px ;
+	grid-template-rows: 100px auto 100px ;
 	grid-row-gap: 15px;
 
 	background-image: url("img/mont3.jpg");
@@ -264,7 +264,7 @@ footer {
 	grid-column-start: 2;
 	grid-column-end: 3;
 
-	grid-template-rows: [leyenda] 0.5fr [tipo1] 1fr [tipo2] 1fr [mixto] 1fr;
+	grid-template-rows: [leyenda] 50px [tipo1] 1fr [tipo2] 1fr [mixto] 1fr;
 	grid-template-columns: [individual] 2fr [peque] 3fr [grande] 4fr;
 
  	grid-column-gap: 15px;
@@ -286,10 +286,13 @@ footer {
 	text-align: left;
 }
 
+.caja hr {
+	width: 80%;
+	margin: 15px auto;
+}
+
 .caja img {
-	position: fixed;
 	width: 50px;
-	opacity: .6;
 }
 
 .caja img:hover {
