@@ -245,14 +245,14 @@ footer {
 		grid-template-rows: 130px auto 100px auto 50px;
 		grid-template-columns: 1fr;
 	}
-	
+
 	#ladoIzq {
 		grid-row-start: 2;
 		grid-row-end: 3;
 		grid-column-start: 1;
 		grid-column-end: 2;
 	}
-	
+
 	#ladoDer {
 		grid-row-start: 4;
 		grid-row-end: 5;
@@ -270,11 +270,11 @@ footer {
 		margin: 0;
 		background-color: rgb(32, 89, 33);
 	}
-	
+
 	footer {
 		grid-row-start: 5;
 	}
-	
+
 }
 
 /* ------------ Tienda -------------*/
@@ -360,6 +360,83 @@ footer {
 #footerTienda {
 	grid-row-start: 3;
 }
+
+/* ------------ Contacto -------------*/
+.leyenda1{
+	background-color: rgba(74,50,20,.6);
+
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+
+.leyenda2{
+	background-color: rgba(74,50,20,.6);
+
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 4;
+	grid-column-end: 6;
+}
+
+.nosotros {
+  background-color: rgba(40,80,10,.6);
+	grid-row-start: tipo1;
+
+	grid-row-start: 3;
+	grid-row-end: 4;
+	grid-column-start: 2;
+	grid-column-end: 4;
+
+}
+
+.contacta {
+	background-color: rgba(20,50,99,.6);
+	grid-row-start: tipo2;
+
+	grid-row-start: 3;
+	grid-row-end: 4;
+	grid-column-start: 4;
+	grid-column-end: 6;
+
+}
+
+.caja2 {
+  padding:10px;
+	color: white;
+	font-family: rexlia;
+	font-size: 15px;
+	border-radius: 2px;
+	text-align: center;
+
+
+	z-index:2;
+}
+
+.fondoCon{
+	width: 100%;
+	height: 100%;
+
+	z-index:1;
+
+	grid-row-start: 2;
+	grid-row-end: 5;
+	grid-column-start: 1;
+	grid-column-end: 7;
+}
+
+.f{
+	width: 250px;
+	height: 200px;
+}
+
+.p2{
+	margin-top:20px;
+	font-size:14px;
+}
+
+
 /* fuentes */
 
 @font-face {
