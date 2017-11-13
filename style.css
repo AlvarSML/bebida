@@ -167,7 +167,7 @@ header a:hover{
 #ladoIzq>p {
 	visibility: hidden;
 	width: 80%;
-	margin: 100px auto;
+	margin: 120px auto;
 }
 
 #ladoIzq>img:hover + p {
@@ -187,7 +187,7 @@ header a:hover{
 #ladoDer>p {
 	visibility: hidden;
 	width: 80%;
-	margin: 100px auto;
+	margin: 120px auto;
 }
 
 #ladoDer>img:hover + p {
@@ -216,10 +216,12 @@ header a:hover{
 	grid-column-end: 5;
 	grid-row-start: 3;
 	grid-row-end: 4;
-
-	margin: 270px 0;
+	margin: 250px auto;
 }
 
+#logo img {
+	width: 150px;
+}
 /* Footer */
 
 footer {
@@ -243,7 +245,7 @@ footer {
 	
 	body {
 		display: grid;
-		grid-template-rows: 110px 550px 30px 30px 550px 50px;
+		grid-template-rows: 110px 550px 30px 45px 550px 50px;
 		grid-template-columns: 1fr;
 	}
 
@@ -296,13 +298,12 @@ footer {
 		width: 100%;
 		padding: 0;
 		margin: 0;
-		background: rgba(230,230,230,.5) ;
+		background: rgba(230,230,230,.5);
 	}
 	
-	#logo h1{
-		padding: 0;
-		font-size: 10px;
-		color: #111111;
+	#logo img{
+		width: 100px;
+		margin: 0 45%;
 	}
 
 	footer {
