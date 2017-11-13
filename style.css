@@ -34,6 +34,7 @@ a {
 
 body {
 	height: 100%;
+	overflow-x: hidden;
 
 	/*grid*/
 	display: grid;
@@ -316,6 +317,7 @@ footer {
 
 	footer {
 		grid-row-start: 6;
+		z-index: 4;
 	}
 
 }
@@ -429,7 +431,7 @@ footer {
 .nosotros {
   background-color: rgba(40,80,10,.6);
 	grid-row-start: tipo1;
-  	
+
 	grid-row-start: 3;
 	grid-row-end: 4;
 	grid-column-start: 2;
@@ -473,9 +475,12 @@ textarea {
 	width: 70%;
 }
 
-.fondoCon{
-	width: 100%;
+#fondocon{
+	width: 200%;
 	height: 100%;
+	position: relative;
+	animation: 30s slidy infinite;
+	overflow: hidden;
 
 	z-index:1;
 
@@ -483,6 +488,20 @@ textarea {
 	grid-row-end: 5;
 	grid-column-start: 1;
 	grid-column-end: 7;
+}
+
+#fondocon img{
+		position: relative;
+	 float: left;
+	 width: 50%;
+	 height: 700px;
+
+}
+
+@keyframes slidy {
+0% { left: 0%; }
+50% { left: -100%}
+100% { left: 0; }
 }
 
 .f{
