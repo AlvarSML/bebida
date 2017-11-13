@@ -242,15 +242,15 @@ footer {
 }
 
 @media (min-height: 800px){
-	
+
 	body{
 		grid-template-rows: [header] 100px [containerinicio] 100px [container] 500px [containerfin] 100px [footer] auto;
 	}
-	
+
 }
 
 @media (max-width: 800px) {
-	
+
 	body {
 		display: grid;
 		grid-template-rows: 110px 550px 30px 45px 550px 50px;
@@ -265,11 +265,11 @@ footer {
 
 		background-attachment: fixed;
 	}
-	
+
 	#ladoIzq img {
 		margin: 0;
 	}
-	
+
 	#ladoDer p {
 		background-color: rgba(12, 99, 3, 0.37);
 	}
@@ -282,15 +282,15 @@ footer {
 
 		background-attachment: fixed;
 	}
-	
+
 	#ladoDer img{
 		margin: 25px 0;
 	}
-	
+
 	#ladoIzq p {
 		background-color: rgba(118, 186, 245, 0.3);
 	}
-	
+
 	#ladoIzq p, #ladoDer p{
 		margin: 200px auto;
 		padding: 10px;
@@ -302,13 +302,13 @@ footer {
 		grid-row-end: 5;
 		grid-column-start: 1;
 		grid-column-end: 2;
-		
+
 		width: 100%;
 		padding: 0;
 		margin: 0;
 		background: rgba(230,230,230,.5);
 	}
-	
+
 	#logo img{
 		width: 100px;
 		margin: 0 45%;
@@ -413,6 +413,7 @@ footer {
 	grid-row-end: 3;
 	grid-column-start: 2;
 	grid-column-end: 4;
+	padding: 20px;
 }
 
 .leyenda2{
@@ -422,17 +423,22 @@ footer {
 	grid-row-end: 3;
 	grid-column-start: 4;
 	grid-column-end: 6;
+	padding: 20px;
 }
 
 .nosotros {
   background-color: rgba(40,80,10,.6);
 	grid-row-start: tipo1;
-
+  	
 	grid-row-start: 3;
 	grid-row-end: 4;
 	grid-column-start: 2;
 	grid-column-end: 4;
+}
 
+.nosotros p {
+	margin: 20px 40px;
+	line-height: 30px;
 }
 
 .contacta {
@@ -446,8 +452,13 @@ footer {
 
 }
 
+.contacta input{
+	padding:2px;
+	width: 70%;
+}
+
 .caja2 {
-  padding:10px;
+  margin:10px;
 	color: white;
 	font-family: rexlia;
 	font-size: 15px;
@@ -456,6 +467,10 @@ footer {
 
 
 	z-index:2;
+}
+
+textarea {
+	width: 70%;
 }
 
 .fondoCon{
@@ -473,12 +488,35 @@ footer {
 .f{
 	width: 250px;
 	height: 200px;
+	margin: 20px;
 }
 
 .p2{
-	margin-top:20px;
+	margin:20px auto;
 	font-size:14px;
 }
+
+#boton{
+	color:#474747;
+	border-radius: 5px;
+	margin-top:19px;
+	font-family: rexlia;
+  padding-left: 10px;
+  padding-right: 10px;
+	font-size: 20px;
+	width: 30%;
+}
+
+#boton:hover{
+	background-color: #3b3332;
+	color:white;
+}
+
+.nosotros hr{
+	width: 80%;
+	margin: 20px auto;
+}
+
 
 
 /* fuentes */
