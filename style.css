@@ -251,6 +251,7 @@ footer {
 
 @media (max-width: 800px) {
 
+	/* Index */
 	body {
 		display: grid;
 		grid-template-rows: 110px 550px 30px 45px 550px 50px;
@@ -326,7 +327,6 @@ footer {
 /*Container*/
 #bodyTienda {
 	grid-template-columns:15px 1fr 15px;
-	/* arreglar footer*/
 	grid-template-rows: 100px auto 100px ;
 	grid-row-gap: 15px;
 
@@ -406,6 +406,39 @@ footer {
 	grid-row-start: 3;
 }
 
+@media (max-width: 800px) {
+	/* tienda */
+
+	#bodyTienda{
+		grid-template-columns: 1fr ;
+	  grid-template-rows: 100px auto 100px;
+
+		grid-row-gap: 0;
+		grid-column-gap: 0;
+	}
+
+	#containerTienda{
+		grid-template-rows: [leyenda] 70px [tipo1] 1fr [tipo2] 1fr [mixto] 1fr;
+	  grid-template-columns: [individual] auto [peque] auto [grande] auto;
+
+		grid-row-gap: 0px;
+		grid-column-gap: 0px;
+	}
+
+	.caja {
+		margin: 0;
+		border-radius: 0;
+		border-style: solid;
+		border-width: 1px 2px;
+	}
+
+	.leyenda {
+		border-style: solid;
+		border-width: 2px 2px;
+	}
+}
+
+
 /* ------------ Contacto -------------*/
 .leyenda1{
 	background-color: rgba(74,50,20,.6);
@@ -450,7 +483,6 @@ footer {
 	grid-row-end: 4;
 	grid-column-start: 4;
 	grid-column-end: 6;
-
 }
 
 .contacta input{
@@ -465,7 +497,6 @@ footer {
 	font-size: 15px;
 	border-radius: 2px;
 	text-align: center;
-
 
 	z-index:2;
 }
@@ -498,9 +529,9 @@ textarea {
 }
 
 @keyframes slidy {
-0% { left: 0%; }
-50% { left: -100%}
-100% { left: 0; }
+	0% { left: 0%; }
+	50% { left: -100%}
+	100% { left: 0; }
 }
 
 .f{
@@ -535,6 +566,7 @@ textarea {
 	margin: 20px auto;
 }
 
+/* media */
 
 
 /* fuentes */
