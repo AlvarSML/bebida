@@ -1,10 +1,7 @@
 /**
 *	TODO:
-*	-ajustar animaciones
-* -responsividad tienda/contacto
 *-detalles
 */
-
 
 /* Generales */
 * {
@@ -28,6 +25,10 @@ h1 {
 
 a {
 	text-decoration: none;
+}
+
+i {
+	font-size: 20px;
 }
 /* Body */
 
@@ -319,13 +320,13 @@ footer {
 		grid-row-start: 6;
 		z-index: 4;
 	}
-  
+
 	/* contacto */
-	
+
 	#bodyContacto {
 		grid-template-rows: 100px 100px 1fr 100px 1fr 100px;
 	}
-	
+
 	#leyenda2{
 		grid-row-start: 4;
 		grid-row-end: 5;
@@ -443,6 +444,36 @@ footer {
 
 #footerTienda {
 	grid-row-start: 3;
+}
+
+@media (max-width: 900px) {
+  
+	#containerTienda {
+		grid-column-gap: 5px;
+		grid-template-rows: [leyenda] 80px [tipo1] 400px [tipo2] 400px [mixto] 1fr;
+	 grid-template-columns: [individual] 1fr [peque] 1fr [grande] 1fr;
+	}
+	
+	.caja img{
+		margin 0 auto;
+	}
+	
+	.cajaVerde img + img, .cajaAzul img + img {
+		display: none;
+	}
+	
+	.cajaMixta img + img{
+		display: none;
+	}
+	
+	.cajaMixta img:first-of-type + img {
+		display: inline;
+		margin: 0;
+	}
+	
+	.cajaMixta img{
+		margin: 0;
+	}
 }
 
 /* ------------ Contacto -------------*/
