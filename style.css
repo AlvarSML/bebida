@@ -506,7 +506,7 @@ footer {
 	text-align: center;
 
 
-	z-index:2;
+	z-index: 1;
 }
 
 textarea {
@@ -575,7 +575,9 @@ textarea {
 	margin: 20px auto;
 }
 
-
+header ul {
+	z-index: 2;
+}
 
 /* fuentes */
 
