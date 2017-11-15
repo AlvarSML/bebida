@@ -231,6 +231,7 @@ footer {
 	grid-row-start: footer;
 	grid-column-start: 1;
 	grid-column-end: 7;
+	z-index: 3;
 }
 
 
@@ -318,21 +319,16 @@ footer {
 		grid-row-start: 6;
 		z-index: 4;
 	}
-/*
-	#leyenda1{
-		background-color: rgba(40,80,10,.6);
-		grid-row-start: 2;
-		grid-row-end: 3;
-		grid-column-start: 2;
-		grid-column-end: 4;
-		padding: 20px;
-
-	}*/
-
+  
+	/* contacto */
+	
+	#bodyContacto {
+		grid-template-rows: 100px 100px 1fr 100px 1fr 100px;
+	}
+	
 	#leyenda2{
-		background-color: rgba(20,50,99,.6);
-		grid-row-start: 5;
-		grid-row-end: 6;
+		grid-row-start: 4;
+		grid-row-end: 5;
 		grid-column-start: 2;
 		grid-column-end: 4;
 		padding: 20px;
@@ -340,27 +336,27 @@ footer {
 	}
 
 	#nosotros {
-		grid-row-start: 2;
-		grid-row-end: 3;
+		grid-row-start: 3;
+		grid-row-end: 4;
 		grid-column-start: 2;
 		grid-column-end: 4;
 
 	}
 
 	#contacta {
-		grid-row-start: 3;
+		grid-row-start: 5;
 		grid-row-end: 6;
 		grid-column-start: 1;
 		grid-column-end: 4;
 
 	}
 	/*Arreglar*/
-#fondocon{
-	grid-row-start: 2;
-	grid-row-end: 8;
-	grid-column-start: 1;
-	grid-column-end: 3;
-}
+  #fondocon{
+	 grid-row-start: 2;
+	 grid-row-end: 8;
+	 grid-column-start: 1;
+	 grid-column-end: 3;
+  }
 
 }
 
@@ -521,13 +517,13 @@ textarea {
 	width: 200%;
 	height: 100%;
 	position: relative;
-	animation: 30s slidy infinite;
+	animation: 30s slidy infinite alternate linear;
 	overflow: hidden;
 
 	z-index:1;
 
 	grid-row-start: 2;
-	grid-row-end: 8;
+	grid-row-end: 6;
 	grid-column-start: 1;
 	grid-column-end: 8;
 }
@@ -541,13 +537,14 @@ textarea {
 }
 
 @keyframes slidy {
-0% { left: 0%; }
-50% { left: -100%}
-100% { left: 0; }
+  0% { left: 0% }
+	25% { left: 0% }
+  75% { left: -100%}
+  100% { left: -100%}
 }
 
 .f{
-	width: 250px;
+	width: 80%;
 	height: 200px;
 	margin: 20px;
 }
