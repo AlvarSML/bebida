@@ -166,8 +166,11 @@ header a:hover{
 
 #ladoIzq>p {
 	visibility: hidden;
-	width: 80%;
+	width: 70%;
 	margin: 120px auto;
+	background-color: rgba(118, 186, 245, 0.3);
+	padding:10px;
+	border-radius: 10px;
 }
 
 #ladoIzq>img:hover + p {
@@ -186,8 +189,11 @@ header a:hover{
 
 #ladoDer>p {
 	visibility: hidden;
-	width: 80%;
+	width: 70%;
 	margin: 120px auto;
+	background-color: rgba(12, 99, 3, 0.37);
+	padding:10px;
+	border-radius: 10px;
 }
 
 #ladoDer>img:hover + p {
@@ -352,7 +358,7 @@ footer {
 		grid-column-end: 4;
 
 	}
-	
+
 	/*Arreglar*/
   #fondocon{
 	 grid-row-start: 2;
@@ -577,8 +583,8 @@ textarea {
 @keyframes slidy {
 
   0% { left: 0% }
-	25% { left: 0% }
-  75% { left: -100%}
+	50% { left: 0% }
+  55% { left: -100%}
   100% { left: -100%}
 
 }
@@ -625,7 +631,7 @@ header ul {
 	#bodyContacto {
 	 grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 100px [footer] 1fr 100px;
   }
-	
+
 	#bodyContacto footer{
 		grid-row-start: 6 ;
 	}
