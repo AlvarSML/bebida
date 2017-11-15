@@ -1,6 +1,5 @@
 /**
 *	TODO:
-*-detalles
 */
 
 /* Generales */
@@ -448,30 +447,30 @@ footer {
 }
 
 @media (max-width: 900px) {
-  
+
 	#containerTienda {
 		grid-column-gap: 5px;
 		grid-template-rows: [leyenda] 80px [tipo1] 400px [tipo2] 400px [mixto] 1fr;
 	 grid-template-columns: [individual] 1fr [peque] 1fr [grande] 1fr;
 	}
-	
+
 	.caja img{
 		margin 0 auto;
 	}
-	
+
 	.cajaVerde img + img, .cajaAzul img + img {
 		display: none;
 	}
-	
+
 	.cajaMixta img + img{
 		display: none;
 	}
-	
+
 	.cajaMixta img:first-of-type + img {
 		display: inline;
 		margin: 0;
 	}
-	
+
 	.cajaMixta img{
 		margin: 0;
 	}
@@ -480,7 +479,7 @@ footer {
 /* ------------ Contacto -------------*/
 
 #bodyContacto{
-	grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 10px [footer] 50px; 
+	grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 10px [footer] 50px;
 
 }
 
@@ -619,7 +618,7 @@ header ul {
 
 @media (max-width: 1000px){
 	#bodyContacto {
-	 grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 10px [footer] 50px; 
+	 grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 10px [footer] 50px;
 
   }
 }
