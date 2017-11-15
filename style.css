@@ -38,7 +38,7 @@ body {
 
 	/*grid*/
 	display: grid;
-	grid-template-rows: [header] 100px [containerinicio] 100px [container] 500px [containerfin] 100px [footer] 50px;
+	grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 100px [footer] 50px;
 	grid-template-columns: repeat(6,1fr);
 }
 
@@ -229,7 +229,7 @@ footer {
 	background-color: #514948;
 
 	/*grid*/
-	grid-row-start: footer;
+	grid-row-start: 5;
 	grid-column-start: 1;
 	grid-column-end: 7;
 	z-index: 3;
@@ -325,6 +325,7 @@ footer {
 
 	#bodyContacto {
 		grid-template-rows: 100px 100px 1fr 100px 1fr 100px;
+		grid-template-columns: 1fr;
 	}
 
 	#leyenda2{
@@ -477,6 +478,12 @@ footer {
 }
 
 /* ------------ Contacto -------------*/
+
+#bodyContacto{
+	grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 10px [footer] 50px; 
+
+}
+
 .leyenda1{
 	background-color: rgba(74,50,20,.6);
 
@@ -588,7 +595,7 @@ textarea {
 #boton{
 	color:#474747;
 	border-radius: 5px;
-	margin-top:19px;
+	margin:19px auto;
 	font-family: rexlia;
   padding-left: 10px;
   padding-right: 10px;
@@ -608,6 +615,13 @@ textarea {
 
 header ul {
 	z-index: 2;
+}
+
+@media (max-width: 1000px){
+	#bodyContacto {
+	 grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 10px [footer] 50px; 
+
+  }
 }
 
 /* fuentes */
