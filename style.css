@@ -1,10 +1,6 @@
 /**
 *	TODO:
-*	-ajustar animaciones
-* -responsividad tienda/contacto
-*-detalles
 */
-
 
 /* Generales */
 * {
@@ -29,6 +25,10 @@ h1 {
 a {
 	text-decoration: none;
 }
+
+i {
+	font-size: 20px;
+}
 /* Body */
 
 body {
@@ -37,7 +37,7 @@ body {
 
 	/*grid*/
 	display: grid;
-	grid-template-rows: [header] 100px [containerinicio] 100px [container] 500px [containerfin] 100px [footer] 50px;
+	grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 100px [footer] 50px;
 	grid-template-columns: repeat(6,1fr);
 }
 
@@ -228,9 +228,10 @@ footer {
 	background-color: #514948;
 
 	/*grid*/
-	grid-row-start: footer;
+	grid-row-start: 5;
 	grid-column-start: 1;
 	grid-column-end: 7;
+	z-index: 3;
 }
 
 
@@ -320,6 +321,45 @@ footer {
 		z-index: 4;
 	}
 
+	/* contacto */
+
+	#bodyContacto {
+		grid-template-rows: 100px 100px 1fr 100px 1fr 100px;
+		grid-template-columns: 1fr;
+	}
+
+	#leyenda2{
+		grid-row-start: 4;
+		grid-row-end: 5;
+		grid-column-start: 2;
+		grid-column-end: 4;
+		padding: 20px;
+
+	}
+
+	#nosotros {
+		grid-row-start: 3;
+		grid-row-end: 4;
+		grid-column-start: 2;
+		grid-column-end: 4;
+
+	}
+
+	#contacta {
+		grid-row-start: 5;
+		grid-row-end: 6;
+		grid-column-start: 1;
+		grid-column-end: 4;
+
+	}
+	/*Arreglar*/
+  #fondocon{
+	 grid-row-start: 2;
+	 grid-row-end: 8;
+	 grid-column-start: 1;
+	 grid-column-end: 3;
+  }
+
 }
 
 /* ------------ Tienda -------------*/
@@ -406,40 +446,44 @@ footer {
 	grid-row-start: 3;
 }
 
-@media (max-width: 800px) {
-	/* tienda */
+@media (max-width: 900px) {
 
-	#bodyTienda{
-		grid-template-columns: 1fr ;
-	  grid-template-rows: 100px auto 100px;
-
-		grid-row-gap: 0;
-		grid-column-gap: 0;
+	#containerTienda {
+		grid-column-gap: 5px;
+		grid-template-rows: [leyenda] 80px [tipo1] 400px [tipo2] 400px [mixto] 1fr;
+	 grid-template-columns: [individual] 1fr [peque] 1fr [grande] 1fr;
 	}
 
-	#containerTienda{
-		grid-template-rows: [leyenda] 70px [tipo1] 1fr [tipo2] 1fr [mixto] 1fr;
-	  grid-template-columns: [individual] auto [peque] auto [grande] auto;
-
-		grid-row-gap: 0px;
-		grid-column-gap: 0px;
+	.caja img{
+		margin 0 auto;
 	}
 
-	.caja {
+	.cajaVerde img + img, .cajaAzul img + img {
+		display: none;
+	}
+
+	.cajaMixta img + img{
+		display: none;
+	}
+
+	.cajaMixta img:first-of-type + img {
+		display: inline;
 		margin: 0;
-		border-radius: 0;
-		border-style: solid;
-		border-width: 1px 2px;
 	}
 
-	.leyenda {
-		border-style: solid;
-		border-width: 2px 2px;
+	.cajaMixta img{
+		margin: 0;
 	}
 }
 
 
 /* ------------ Contacto -------------*/
+
+#bodyContacto{
+	grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 10px [footer] 50px;
+
+}
+
 .leyenda1{
 	background-color: rgba(74,50,20,.6);
 
@@ -498,7 +542,8 @@ footer {
 	border-radius: 2px;
 	text-align: center;
 
-	z-index:2;
+	z-index: 1;
+
 }
 
 textarea {
@@ -509,33 +554,36 @@ textarea {
 	width: 200%;
 	height: 100%;
 	position: relative;
-	animation: 30s slidy infinite;
+	animation: 30s slidy infinite alternate linear;
 	overflow: hidden;
 
 	z-index:1;
 
 	grid-row-start: 2;
-	grid-row-end: 5;
+	grid-row-end: 6;
 	grid-column-start: 1;
-	grid-column-end: 7;
+	grid-column-end: 8;
 }
 
 #fondocon img{
 		position: relative;
 	 float: left;
 	 width: 50%;
-	 height: 700px;
+	 height: 100%;
 
 }
 
 @keyframes slidy {
-	0% { left: 0%; }
-	50% { left: -100%}
-	100% { left: 0; }
+
+  0% { left: 0% }
+	25% { left: 0% }
+  75% { left: -100%}
+  100% { left: -100%}
+
 }
 
 .f{
-	width: 250px;
+	width: 80%;
 	height: 200px;
 	margin: 20px;
 }
@@ -548,7 +596,7 @@ textarea {
 #boton{
 	color:#474747;
 	border-radius: 5px;
-	margin-top:19px;
+	margin:19px auto;
 	font-family: rexlia;
   padding-left: 10px;
   padding-right: 10px;
@@ -566,8 +614,18 @@ textarea {
 	margin: 20px auto;
 }
 
-/* media */
 
+header ul {
+	z-index: 2;
+}
+
+
+@media (max-width: 1000px){
+	#bodyContacto {
+	 grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 10px [footer] 50px;
+
+  }
+}
 
 /* fuentes */
 
