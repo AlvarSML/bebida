@@ -352,6 +352,7 @@ footer {
 		grid-column-end: 4;
 
 	}
+	
 	/*Arreglar*/
   #fondocon{
 	 grid-row-start: 2;
@@ -560,7 +561,7 @@ textarea {
 	z-index:1;
 
 	grid-row-start: 2;
-	grid-row-end: 6;
+	grid-row-end: 7;
 	grid-column-start: 1;
 	grid-column-end: 8;
 }
@@ -622,9 +623,12 @@ header ul {
 
 @media (max-width: 1000px){
 	#bodyContacto {
-	 grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 10px [footer] 50px;
-
+	 grid-template-rows: [header] 100px [containerinicio] 100px [container] 1fr [containerfin] 100px [footer] 1fr 100px;
   }
+	
+	#bodyContacto footer{
+		grid-row-start: 6 ;
+	}
 }
 
 /* fuentes */
