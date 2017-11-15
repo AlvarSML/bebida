@@ -252,6 +252,7 @@ footer {
 
 @media (max-width: 800px) {
 
+	/* Index */
 	body {
 		display: grid;
 		grid-template-rows: 110px 550px 30px 45px 550px 50px;
@@ -366,7 +367,6 @@ footer {
 /*Container*/
 #bodyTienda {
 	grid-template-columns:15px 1fr 15px;
-	/* arreglar footer*/
 	grid-template-rows: 100px auto 100px ;
 	grid-row-gap: 15px;
 
@@ -476,6 +476,7 @@ footer {
 	}
 }
 
+
 /* ------------ Contacto -------------*/
 
 #bodyContacto{
@@ -526,7 +527,6 @@ footer {
 	grid-row-end: 4;
 	grid-column-start: 4;
 	grid-column-end: 6;
-
 }
 
 .contacta input{
@@ -542,8 +542,8 @@ footer {
 	border-radius: 2px;
 	text-align: center;
 
-
 	z-index: 1;
+
 }
 
 textarea {
@@ -574,10 +574,12 @@ textarea {
 }
 
 @keyframes slidy {
+
   0% { left: 0% }
 	25% { left: 0% }
   75% { left: -100%}
   100% { left: -100%}
+
 }
 
 .f{
@@ -612,9 +614,11 @@ textarea {
 	margin: 20px auto;
 }
 
+
 header ul {
 	z-index: 2;
 }
+
 
 @media (max-width: 1000px){
 	#bodyContacto {
