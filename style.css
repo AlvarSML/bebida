@@ -171,6 +171,7 @@ header a:hover{
 	background-color: rgba(118, 186, 245, 0.3);
 	padding:10px;
 	border-radius: 10px;
+	height: 150px;
 }
 
 #ladoIzq>img:hover + p {
@@ -194,6 +195,7 @@ header a:hover{
 	background-color: rgba(12, 99, 3, 0.37);
 	padding:10px;
 	border-radius: 10px;
+	height: 150px;
 }
 
 #ladoDer>img:hover + p {
